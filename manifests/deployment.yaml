@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: htmlapp
-        image: azesu.azurecr.io/web-app-html:v1
+        image: homeworkcr.azurecr.io/web-app-html:v1
         ports:
         - containerPort: 80
           name: htmlapp
