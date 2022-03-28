@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: phpapp-deployment
+  name: htmlapp-deployment
   labels:
-    app: phpapp-deployment
+    app: htmlapp-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: phpapp
+      app: htmlapp
   template:
     metadata:
       labels:
-        app: phpapp
+        app: htmlapp
     spec:
       containers:
-      - name: phpapp
-        image: azesu.azurecr.io/aze-web-app-php:v1
+      - name: htmlapp
+        image: azesu.azurecr.io/web-app-html:v1
         ports:
         - containerPort: 80
-          name: phpapp
+          name: htmlapp
